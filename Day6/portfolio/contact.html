@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Contact</title>
+  <script>
+    function submitForm(event) {
+      event.preventDefault(); // Prevent default form submission
+
+      const formData = new FormData(event.target);
+      const xhr = new XMLHttpRequest();
+      xhr.open("POST", "contact.php", true);
+
+      xhr.onload = function () {
+        if (xhr.status === 200) {
+          alert("Thank you! Your message has been sent.");
+        } else {
+          alert("Oops! Something went wrong, and we couldn't send your message.");
+        }
+      };
+
+      xhr.send(formData);
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">Hemashri H M</div>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  <h2>Get in Touch</h2>
+  <form onsubmit="submitForm(event)">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" value="Hemashri H M">
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email">
+    <label for="message">Message:</label>
+    <textarea id="message" name="message"></textarea>
+    <button type="submit">Submit</button>
+  </form>
+  <footer style="text-align: center; padding: 20px; background-color: #f1f1f1; border-top: 1px solid #e1e1e1;">
+    <p style="font-size: 16px; color: #333;">Connect with me:</p>
+    <a href="https://www.linkedin.com/in/hemashri-h-m-2bb867263" target="_blank" style="margin-right: 10px; text-decoration: none; color: #0077b5;">LinkedIn</a> |
+    <a href="https://github.com/HemashriHM" target="_blank" style="margin-left: 10px; text-decoration: none; color: #333;">GitHub</a>
+  </footer>
+</body>
+</html>

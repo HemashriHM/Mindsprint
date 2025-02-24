@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Alex",
+      "email": "alex@gmail.com",
+      "address": "UK"
+    },
+    {
+      "id": 2,
+      "name": "Bobby",
+      "email": "Bobby@gmail.com",
+      "address": "mysore"
+    },
+    {
+      "id": 3,
+      "name": "Hari",
+      "email": "Hari@gmail.com",
+      "address": "USA"
+    },
+    {
+      "id": 4,
+      "name": "David",
+      "email": "david@gmail.com",
+      "address": "Uae"
+    }
+  ]
+}
